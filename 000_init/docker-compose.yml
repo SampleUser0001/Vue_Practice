@@ -1,0 +1,7 @@
+nginx:
+    image: nginx
+    container_name: vuejs
+    ports: 
+        - "80:80"
+    volumes:
+        - .:/usr/share/nginx/html/
