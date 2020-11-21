@@ -5,14 +5,26 @@
     </head>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <body>
-        <div id="app-3">
+        <div id="app-3_1">
             <span v-if="seen">Now you see me</span>
         </div>
         <script>
             var app3 = new Vue({
-                el: '#app-3',
+                el: '#app-3_1',
                 data: {
                     seen: true
+                }
+            })
+        </script>
+        <hr>
+        <div id="app-3_2">
+            <span v-if="seen">Now you see me</span>
+        </div>
+        <script>
+            var app3 = new Vue({
+                el: '#app-3_2',
+                data: {
+                    seen: false
                 }
             })
         </script>
