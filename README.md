@@ -2,9 +2,15 @@
 Vue.jsの勉強をする。 
 
 - [Vue_Practice](#vue_practice)
-  - [000_init](#000_init)
+  - [リンク](#リンク)
+  - [リポジトリ](#リポジトリ)
+
+## リンク
+
+- [000_init](./000_init/index.html)
+  - [はじめに](https://jp.vuejs.org/v2/guide/)
 
 
-## 000_init
+## リポジトリ
 
-[はじめに](https://jp.vuejs.org/v2/guide/)
+- [Vue_Practice](https://github.com/SampleUser0001/Vue_Practice)
