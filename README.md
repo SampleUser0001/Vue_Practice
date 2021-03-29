@@ -13,6 +13,7 @@ Vue.jsの勉強をする。
 
 - [000_init](./v2/000_init/index.html)
 - [001_vueInstance](https://github.com/SampleUser0001/Vue_Practice_VueInstance)
+- [002_template](./v2/VueProjects/002_template/README.md)
 
 ## リポジトリ
 
