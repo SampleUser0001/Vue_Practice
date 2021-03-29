@@ -4,7 +4,23 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>:valueってなんだ</title>
   </head>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <body>
     <input type="hidden" :value="hogehoge" />
+
+    <div id="app">
+      <span v-text="message"></span><br>
+      <br>
+      :valueは短縮記法というらしい。<br>
+      <input type=text :value="message"></input>
+    </div>
+    <script>
+      var app = new Vue({
+        el: '#app',
+        data: {
+          message: 'Hello Vue!'
+        }
+      })      
+    </script>
   </body>
 </html>
