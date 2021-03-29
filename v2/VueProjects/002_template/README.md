@@ -9,7 +9,7 @@ templateタグのサンプル
 ## コマンド
 
 ```
-cd /v2/VueProjects/002_template/my-project
+cd ./v2/VueProjects/002_template/my-project
 # 必要に応じて
 # yarn install
 yarn serve
