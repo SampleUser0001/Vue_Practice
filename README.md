@@ -12,12 +12,18 @@ Vue.jsの勉強をする。
 ### Version2 
 
 - [000_init](./v2/000_init/index.html)
-  - [はじめに](https://jp.vuejs.org/v2/guide/)
-
-### Version3 
-
-- [Vue.js（Version3）:はじめに](https://v3.ja.vuejs.org/guide/introduction.html)
+- [001_vueInstance](https://github.com/SampleUser0001/Vue_Practice_VueInstance)
 
 ## リポジトリ
 
 - [Vue_Practice](https://github.com/SampleUser0001/Vue_Practice)
+
+## 参考
+
+### Version2 
+
+- [Vue.js:はじめに](https://jp.vuejs.org/v2/guide/)
+
+### Version3 
+
+- [Vue.js（Version3）:はじめに](https://v3.ja.vuejs.org/guide/introduction.html)
