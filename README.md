@@ -1,11 +1,14 @@
 # Vue_Practice
-Vue.jsの勉強をする。 
+Vue.jsの勉強をする。
 
 - [Vue_Practice](#vue_practice)
   - [リンク](#リンク)
     - [Version2](#version2)
-    - [Version3](#version3)
+      - [その他](#その他)
   - [リポジトリ](#リポジトリ)
+  - [参考](#参考)
+    - [Version2](#version2-1)
+    - [Version3](#version3)
 
 ## リンク
 
