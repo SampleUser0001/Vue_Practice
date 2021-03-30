@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Setter</title>
+    <meta charset="UTF-8"/>
+  </head>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <body>
+    <div id="example">
+      <p>Full Name: {{ fullName }} </p>
+    </div>
+    <script>
+      let app = new Vue({
+        el: '#example',
+        data: {
+          firstName: 'Hoge',
+          lastName: 'Piyo'
+        },
+        computed: {
+          // getterはapp.fullNameで呼ぶ。
+          fullName: {
+            get: function() {
+              return this.firstName + ' ' + this.lastName
+            },
+            // setterはapp.fullName = '新しい 名前'で呼ぶ。
+            set: function(newValue) {
+              const names = newValue.split(' ')
+              this.firstName = names[0]
+              this.lastName = names[names.length -1]
+            }
+          }
+        }
+      })      
+    </script>
+  </body>
+</html>

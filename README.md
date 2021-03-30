@@ -18,7 +18,9 @@ Vue.jsの勉強をする。
   - [000_init](./v2/000_init/index.html)
   - [001_vueInstance]
   - [002_template](./v2/VueProjects/template)
-  - [003_算出プロパティとウォッチャ]()
+    - [こっち](./v2/VueProjects/componentBasic)のほうがわかりやすいかもしれん。
+  - [003_算出プロパティとウォッチャ](./v2/000_init/index.html)
+    - [Vue.js:算出プロパティとウォッチャ](https://jp.vuejs.org/v2/guide/computed.html)
   - [004_クラスとスタイルのバインディング]()
   - [005_条件付きレンダリング]()
   - [006_イベントハンドリング]()

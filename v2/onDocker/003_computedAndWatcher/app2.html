@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>算出プロパティ</title>
+    <meta charset="UTF-8"/>
+  </head>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <body>
+    <div id="example">
+      <p>Original: {{ message }} </p>
+      <p>Reverse: {{ reversedMessage() }} </p>
+    </div>
+    <script>
+      const app = new Vue({
+        el: '#example',
+        data: {
+          message: 'Hello Vue!'
+        },
+        methods: {
+          reversedMessage: function() {
+            return this.message.split('').reverse().join('')
+          }
+        }
+      })      
+    </script>
+  </body>
+</html>
