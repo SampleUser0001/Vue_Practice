@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>オブジェクト構文</title>
+    <meta charset="UTF-8"/>
+  </head>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <body>
+    <!-- <div class="static active"> と解釈される。-->
+    <div id='example' class="static" v-bind:class="{ active: isActive , 'text-danger': hasError }"></div>
+
+    <!-- こうとも書ける。-->
+    <div id='example2' v-bind:class="classObject"></div>
+
+    <div id='example3' v-bind:class="classObject"></div>
+
+    <script>
+      const app = new Vue({
+        el: '#example',
+        data: {
+          isActive: true, 
+          hasError: false
+        }
+      })
+      const app2 = new Vue({
+        el: '#example2',
+        data: {
+          classObject: {
+            active: true, 
+            'text-danger': false
+          }
+        }
+      })      
+      // これもいける。
+      const app3 = new Vue({
+        el: '#example3',
+        data: {
+          isActive: true, 
+          error: null
+        },
+        computed: {
+          classObject: function(){
+            return {
+              active: this.isActive && !this.error,
+              'text-danger': this.error && this.error.type === 'fatal'
+            }
+          }
+        }
+      })      
+    </script>
+  </body>
+</html>

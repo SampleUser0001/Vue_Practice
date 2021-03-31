@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>配列構文</title>
+    <meta charset="UTF-8"/>
+  </head>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <body>
+    <!-- <div class="active text-danger"> と解釈される。-->
+    <div id='example' v-bind:class="[activeClass, errorClass]"></div>
+
+    <!-- 三項演算子が使える。 -->
+    <div id='example2' v-bind:class="[ isActive ? activeClass : '', errorClass]"></div>
+    <script>
+      const app = new Vue({
+        el: '#example',
+        data: {
+          activeClass: 'active', 
+          errorClass: 'text-danger'
+        }
+      })
+      const app2 = new Vue({
+        el: '#example2',
+        data: {
+          activeClass: 'active', 
+          errorClass: 'text-danger'
+        },
+        computed: {
+          isActive: function() {
+            // サンプルなのでとりあえずtrueにしてしまう。
+            return true
+          }
+        }
+      })
+    </script>
+  </body>
+</html>
