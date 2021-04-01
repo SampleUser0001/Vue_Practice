@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>条件付きレンダリング v-if</title>
+  <meta charset="UTF-8"/>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<body>
+  <div id="example">
+    <h1 v-if="awesome">Vue is awesome!</h1>
+    <h1 v-else>Oh no 😢</h1>
+    <p>awesome is {{ awesome }}</p>
+  </div>
+  <hr>
+  <div id="example2">
+    <h1 v-if="awesome">Vue is awesome!</h1>
+    <h1 v-else>Oh no 😢</h1>
+    <p>awesome is {{ awesome }}</p>
+  </div>
+  <hr>
+  <div id="example3">
+    <h1 v-if="awesome">Vue is awesome!</h1>
+    <h1 v-else>Oh no 😢</h1>
+    <p>awesome is {{ awesome }}</p>
+    <p>※パラメータがない場合、表示はされるがエラーが出る。</p>
+  </div>
+  <hr>
+  <script>
+    const valueIsTrue = new Vue({
+      el: '#example',
+      data:{
+        awesome: true
+      }
+    })
+    const valueIsFalse = new Vue({
+      el: '#example2',
+      data:{
+        awesome: false
+      }
+    })
+    const valueIsEmpty = new Vue({
+      el: '#example3',
+      data:{
+      }
+    })
+  </script>
+</body>
+</html>

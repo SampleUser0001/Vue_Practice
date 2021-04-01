@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>条件付きレンダリング template v-if</title>
+  <meta charset="UTF-8"/>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<body>
+  <div id="example">
+    <p>切り替えできるが、用途的に別の項目なのに値を引き継いでしまうのは良くない。</p>
+    <template v-if="loginType === 'username'">
+      <label>Username</label>
+      <input placeholder="Enter your username">
+    </template>
+    <template v-else>
+      <label>Email</label>
+      <input placeholder="Enter your e-mail">
+    </template>
+    <hr>
+    <p>こちらのほうが良い。(まし？)</p>
+    <template v-if="loginType === 'username'">
+      <label>Username</label>
+      <input placeholder="Enter your username" key="username-input">
+    </template>
+    <template v-else>
+      <label>Email</label>
+      <input placeholder="Enter your e-mail" key="email-input">
+    </template>
+    <br>
+    <input type="button" value="Toggle login type" onclick="buttonClick()" />
+  </div>
+  <script>
+    const app = new Vue({
+      el: '#example',
+      data:{
+        loginType: 'username',
+        // そういえば定数の宣言てどうやんの？
+        username: 'username',
+        email: 'email',
+      }
+    })
+    function buttonClick(){
+      if(app.loginType === app.username){
+        app.loginType = app.email
+      } else {
+        app.loginType = app.username
+      }
+    }
+
+
+</script>
+</body>
+</html>

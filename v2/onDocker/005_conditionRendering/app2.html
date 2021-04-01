@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>条件付きレンダリング template v-if</title>
+  <meta charset="UTF-8"/>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<body>
+  <div id="example">
+    <template v-if="ok">
+      <h1>Title</h1>
+      <p>Paragraph 1</p>
+      <p>Paragraph 2</p>
+    </template>
+  </div>
+  <hr>
+  <div id="example2">
+    <div v-if="type === 'A'">
+      A
+    </div>
+    <div v-else-if="type === 'B'">
+      B
+    </div>
+    <div v-else-if="type === 'C'">
+      C
+    </div>
+    <div v-else>
+      Not A/B/C
+    </div>
+  </div>
+  <script>
+    const app = new Vue({
+      el: '#example',
+      data:{
+        ok: true
+      }
+    })
+    const example2 = new Vue({
+      el: '#example2',
+      data:{
+        type: 'B'
+      }
+    })
+  </script>
+</body>
+</html>
